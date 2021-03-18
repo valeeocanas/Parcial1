@@ -1,0 +1,76 @@
+header {
+
+
+}
+
+
+h2 {
+
+}
+
+.nav {
+
+
+  }
+
+  li {
+
+
+  }
+
+  .content{
+
+}
+
+  .aside {
+
+  }
+
+  .slidebox{
+
+   
+  }
+
+  .article{
+
+  }
+
+
+.poem{
+
+}
+
+
+/*Device = Tablets, Ipads (portrait)
+  Screen = B/w 600px to 990px*/
+  @media (min-width:600px) and (max-width: 990px)  {
+    .article {
+
+  } 
+header{
+
+}
+}
+
+/*  Small devices    */
+@media (max-width:599px) {
+
+header,.content{
+
+}
+
+.nav {
+
+
+  }
+
+
+.nav > li {
+
+}
+
+
+}
+
+
+  
