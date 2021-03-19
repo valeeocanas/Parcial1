@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,13 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 */
 
 // CREA TU FUNCION mayusculas aqui:
-
+function mayusculas(arr){
+  for(var i = 0; i < arr.length; i++){
+    arr[i] = arr[i].toUpperCase();
+ 
+  }
+  console.log(arr);
+}
 
 
 /*
@@ -23,14 +30,29 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 */
 
 // CREA TU FUNCION numVocales aqui:
-
+function numVocales(pal){
+  var contador = 0;
+  for(var i = 0; i < pal.length; i++){
+    if(pal[i] == "a" ||  pal[i] == "e" ||  pal[i] == "i" ||  pal[i] == "o" ||  pal[i] == "u" ||  pal[i] == "A" ||  pal[i] == "E" ||  pal[i] == "I" ||  pal[i] == "O" ||  pal[i] == "U") {
+      contador += 1;
+    }
+  }
+   console.log(pal + " tiene " + contador + " vocales");
+   contador = 0;
+  
+}
+  
 
 /*
 ### F3 Crea una funcion llamada numVocalesArr que reciba un arreglo y mande llamar a la funcion numVocales para que escriba la longitud de cada elemento del arreglo." 
 */
 
 // CREA TU FUNCION numVocalesArr aqui:
-
+function numVocalesArr(arreglo){
+  for(var i = 0; i < arreglo.length; i++){
+    numVocales(arreglo[i]);
+  }
+}
 
 
 
@@ -43,13 +65,30 @@ A) Define un objeto tipo "Perro" que reciba 3 parametros
 1) Nombre
 2) Color
 3) Raza
+*/
+function Perro(nombre, color, raza){
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+    this.printInfo = printInfo;
+}
 
-
+/*
 B) Crea 3 objectos  con diferentes valores
+*/
+var maky = new Perro("Maky","Black","Pug")
+var scooby = new Perro("Scooby","Brown","Chihuahua")
+var laika = new Perro("Laika","Brown","Bulldog")
 
+/*
 C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte. 
+*/
 
-
+console.log(maky.nombre);
+console.log(scooby.color); 
+console.log(laika.raza);  
+  
+/*
 *****BONUS****
 
 Crea una método en la definición del objeto "Perro" llamado printInfo()  que escriba en consola todas las propiedades del objeto que lo invoca. 
@@ -65,6 +104,13 @@ Deberia escribir en consola
 
 */
 
+function printInfo(){
+    var ans = `Nombre: ${this.nombre} , De color: ${this.color}, Raza: ${this.raza}`;
+    console.log(ans);
+}
+
+maky.printInfo();
+  
 
 
 /***
@@ -74,13 +120,13 @@ Deberia escribir en consola
  ***/
 
 // F1
-
+mayusculas(nombres);
 
 // F2
-
+numVocales("hola");
 
 // F3
-
+numVocalesArr(nombres);
 
 
 
@@ -89,7 +135,17 @@ Deberia escribir en consola
  *        PRUEBA TUS OBJETOS
  * 
  ***/
+  
+console.log(maky.nombre);
+console.log(scooby.color); 
+console.log(laika.raza);  
 
+function printInfo(){
+    var ans = `Nombre: ${this.nombre} , De color: ${this.color}, Raza: ${this.raza}`;
+    console.log(ans);
+}
+
+maky.printInfo();  
 
 </script>
 

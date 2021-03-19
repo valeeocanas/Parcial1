@@ -1,11 +1,18 @@
-header {
 
+header {
+ 
 
 }
 
 
 h2 {
-
+  display: flex;
+  padding: 4px;
+  border: 1px solid black;
+  width: 250px;
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .nav {
@@ -14,12 +21,17 @@ h2 {
   }
 
   li {
-
+  list-style: none;
+    display: flex;
+    border: 1px solid black;
+    padding: 5px;
+    width: 60px;
+    flex-wrap: column;
 
   }
 
   .content{
-
+  
 }
 
   .aside {
@@ -45,10 +57,11 @@ h2 {
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
     .article {
-
+     display: flex;
+     flex-direction: column;
   } 
 header{
-
+  display: none;
 }
 }
 
@@ -56,21 +69,21 @@ header{
 @media (max-width:599px) {
 
 header,.content{
-
+  display: none;
 }
 
 .nav {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
 
-
-  }
+}
 
 
 .nav > li {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 180px;
 
 }
-
-
-}
-
-
-  
